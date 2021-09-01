@@ -4,7 +4,7 @@ To-do list web application
 
 ## Description
 
-To-due is web application with a to-do list, task tracker, and productivity web appplication.    
+To-due is a to-do list, task tracker, and productivity web appplication.    
 
 ## Getting Started
 
