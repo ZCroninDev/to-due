@@ -1,9 +1,9 @@
 // Define UI Vars
-const form = document.querySelector("#task-form");
-const taskList = document.querySelector(".collection");
-const clearBtn = document.querySelector(".clear-task");
-const filter = document.querySelector("#filter");
-const taskInput = document.querySelector("#task");
+const form = document.querySelector('#task-form');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const filter = document.querySelector('#filter');
+const taskInput = document.querySelector('#task');
 
 // Load all event listeners
 loadEventListeners();
@@ -11,11 +11,13 @@ loadEventListeners();
 // Load all event listeners
 function loadEventListeners() {
   // Add task event
-  form.addEventListener("submit", addTask);
+  form.addEventListener('submit', addTask);
   // Remove task event
   taskList.addEventListener('click', removeTask);
   // Clear task event
   clearBtn.addEventListener('click', clearTasks);
+  // Filter tasks event
+  filter.addEventListener('keyup', filterTasks);
 }
 
 // Add Task
@@ -34,7 +36,7 @@ function addTask(e) {
   // Add class
   link.className = 'delete-item secondary-content';
   // Add icon html
-  link.innnerHTML = '<i class="fa fa-remove"></i>"';
+  link.innerHTML = '<i class="fa fa-remove"></i>';
   // Append the link to li
   li.appendChild(link);
 
